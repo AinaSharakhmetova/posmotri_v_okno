@@ -9,6 +9,8 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -48,7 +50,7 @@ ol {
 }
 
 .content {
-  margin: 133px 30px;
+  margin: auto 30px;
   display: flex;
   flex-flow: row nowrap;
   align-items: end;
@@ -100,6 +102,10 @@ ol {
   text-decoration: underline;
 }
 
+.search-form__label:active .search-form__label-text {
+  text-decoration: none;
+}
+
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
 }
@@ -127,7 +133,7 @@ ol {
 }
 
 .search-form__textfield:active {
-  border: 1px #fff solid;
+  outline: 1px #fff solid;
 }
 
 .search-form__checkbox-list {
@@ -148,6 +154,13 @@ ol {
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  inline-size: 15px;
+  block-size: 15px;
+  background-color: #fff;
+}
+
+.search-form__checkbox:active + .search-form__pseudo-checkbox::after {
   content: '';
   inline-size: 15px;
   block-size: 15px;
@@ -179,13 +192,6 @@ ol {
   block-size: 300px;
   overflow: auto;
   position: relative;
-  -ms-overflow-style: none; /* Hiding scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hiding scrollbar for Firefox */
-}
-
-/* Hiding scrollbar for Chrome, Safari and Opera */
-.content__list::-webkit-scrollbar {
-  display: none;
 }
 
 .content__list-item:not(:last-child) {
@@ -213,6 +219,14 @@ ol {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
+}
+
+.content__card-link:active .content__video-card-title {
+  text-decoration: none;  
+}
+
+.content__card-link:active .content__video-card-description {
+  text-decoration: none;  
 }
 
 .content__card-link:active .content__video-card {
@@ -285,6 +299,7 @@ ol {
 
 .button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .button:focus {
