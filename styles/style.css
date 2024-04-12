@@ -190,8 +190,10 @@ ol {
 
 .content__list {
   block-size: 300px;
-  overflow: auto;
-  position: relative;
+  inline-size: 398px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;  
 }
 
 .content__list-item:not(:last-child) {
@@ -244,7 +246,7 @@ ol {
 .content__video-card {
   display: grid;
   grid-template-columns: 1fr 194px;
-  block-size: 107px;
+  block-size: 107px;  
   align-items: start;
 }
 
